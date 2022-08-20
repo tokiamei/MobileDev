@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem 适配方案 2 750版本</title>
+    <link rel="stylesheet" href="./CSS/index02.css">
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        
+        window.onresize = () => {
+            const dpWidth = document.documentElement.clientWidth
+            document.documentElement.style.fontSize = `${dpWidth/10}px`
+            document.body.style.fontSize = `${dpWidth/10}px`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width"/> -->
+    <title>02_移动端缩放.html</title>
+    <style>
+        img {
+            height: 300px;
+            width: 320px;
+        }
+    </style>
+</head>
+<body>
+    <img src="../../images/1254541.png" alt="">
+    <img src="../../images/1258034.jpg" alt="">
+    <img src="../../images/1254019.jpg" alt="">
+    <img src="../../images/1258160.jpg" alt="">
+    <div id="info"></div>
+    <script>
+        const info = document.getElementById("info")
+
+        // window 身上的一个方法，只要视口一变，就立即调用方法，用于 PC 端视口的变化，假如是移动端它监测的是 布局视口的变化，但是移动端的布局视口是不变的
+        window.onresize = () => {
+            info.innerHTML = `布局视口宽度：${document.documentElement.clientWidth}<br/>
+        视觉视口宽度：${window.innerWidth}
+        `
+        }
+
+        
+    </script>
+</body>
+</html>

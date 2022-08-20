@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        const box = document.getElementById('box')
+        box.addEventListener('touchstart', () => {
+            console.log('你摸了一下 box');
+        })
+        box.addEventListener('touchmove', () => {
+            console.log('你在 box 上手指移动了');
+        })
+        box.addEventListener('touchend', () => {
+            console.log('你手指离开 box 了');
+        })
+        box.addEventListener('touchcancel', () => {
+            console.log('触摸被打断了');
+        })
+        /* setTimeout(() => {
+            alert('我打断你了')
+        }, 2000) */
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem适配 方案1 750</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        /* 
+            动态设置跟字体大小
+            获取布局视口宽度，因为开启了理想视口，布局视口 = 设备横向独立像素
+         */
+        function adapter() {
+            const dpWidth = document.documentElement.clientWidth
+            const rootfontSize = 100/750*dpWidth
+            document.documentElement.style.fontSize = `${rootfontSize}px`
+            document.body.style.fontSize = `${rootfontSize}px`
+            console.log(rootfontSize);
+        }
+        adapter()
+        window.onresize = adapter
+    </script>
+</body>
+</html>
